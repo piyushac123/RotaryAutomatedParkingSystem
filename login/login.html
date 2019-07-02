@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="login.css">
+	<title>Sign_Up</title>
+	<script type="text/javascript" src="login.js"></script>
+</head>
+<body bgcolor="#424242">
+
+<script>
+    function validatetheform(){
+	
+        var email = document.getElementById("id1").value;
+        //var gender = document.getElementById("id2").value;
+        //var email = document.getElementById("id3").value;
+        //var passcode = document.getElementById("id4").value;
+        var password = document.getElementById("id2").value; 
+       // var conpass= document.getElementById("id6").value;
+         //var x = new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}");
+         //var y= x.test(password);
+
+
+
+        if(email=="")
+        {
+            window.alert("Please enter your Email"); 
+                            email.focus(); 
+                            return false; 
+        }
+
+        if(password=="")
+        {
+            window.alert("Please enter your Password"); 
+                            password.focus(); 
+                            return false; 
+        }    
+    }
+</script>
+
+
+
+	<div id="myid1" >
+		<form name="myForm" class="box" action="login.php"   method="post">
+              <h1 style="margin-bottom: 40px;">Log-In</h1>
+
+			<input id="id1" type="email" name="email1" placeholder="Email-Id" onclick="document.getElementById('id1').style.width='400px'" onblur="notFocus('id1')" ><br>
+      		
+			<input type="password" id="id2" onclick="document.getElementById('id2').style.width='400px'" onblur="notFocus('id2')"  name="password1" minlength="3" maxlength="10"   placeholder="Password" ><br>
+			
+			<input type="Reset"  value="Reset" style="margin-left: 10px;">
+			<input type="submit"     onclick="validatetheform()" style="margin-left: 20px;" value="Login">	
+
+			<p style="float: right; color: white; position: bottom; ">*ALL fields are compulsory*</p>
+		</form>
+
+
+	<div class="footer">
+  				<p class="foot" style="margin-top: 15px;"><a href="../home/home.php">Home</a>&emsp;|&emsp;<a href="../map/map.php">Map</a>&emsp;|&emsp;<a href="#">FAQ's</a></p>
+
+  				<p style="float: right; color: white; ">copyright @2019ParkingManagement.All rights reserved</p>
+
+		</div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="signup.css">
+	<title>Sign_Up</title>
+	<script type="text/javascript" src="signup.js"></script>
+</head>
+<body bgcolor="#424242">
+
+	
+
+
+	
+		<script>
+			
+			function validatetheform(){
+	
+ 	  var name = document.getElementById("id1").value;
+    //var gender = document.getElementById("id2").value;
+    var email = document.getElementById("id3").value;
+    var passcode = document.getElementById("id4").value;
+    var password = document.getElementById("id5").value; 
+    var conpass= document.getElementById("id6").value;
+     //var x = new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}");
+     //var y= x.test(password);
+    if(name=="")
+    {
+    	window.alert("Please enter your Name"); 
+				        name.focus(); 
+				        return false; 
+    }
+
+    
+    if(email=="")
+    {
+    	window.alert("Please enter your Email"); 
+				        email.focus(); 
+				        return false; 
+    }*/
+    if(passcode=="")
+    {
+    	window.alert("Please enter your Passcode"); 
+				        clgid.focus(); 
+				        return false; 
+    }
+    if(password=="")
+    {
+    	window.alert("Please enter your Password"); 
+				        password.focus(); 
+				        return false; 
+    }
+    if(conpass=="")
+    {
+    	window.alert("Please enter your Confirm-Password"); 
+				        conpass.focus(); 
+				        return false; 
+    }
+    if(password!=conpass)
+    {
+    	window.alert("Invalid Password"); 
+				        conpass.focus(); 
+				        return false; 
+
+    }
+
+    // if(y==false)
+    // {
+    // 	window.alert("Please enter password with at least 1 lower case letter,1 upper case letter,1 number with minimum 6 character	"); 
+				//         password.focus(); 
+				//         return false; 
+    // }
+
+				//     alert("You are Logged in!!");
+
+			}
+
+		</script>
+
+
+
+	<div id="myid1" >
+		<form name="myForm" class="box" action="signup.php"   method="post">
+			<h1 style="margin-bottom: 10px;">Sign-Up</h1>
+			<input id="id1" type="text" name="fname" placeholder="Full Name" onclick="document.getElementById('id1').style.width='400px'" onblur="notFocus('id1')" ><br>
+			
+			<input id="id3" type="email" name="email1" placeholder="Email-Id" onclick="document.getElementById('id3').style.width='400px'" onblur="notFocus('id3')" ><br>
+      <input id="id4" type="number" name="passcode" placeholder="Passcode" onclick="document.getElementById('id4').style.width='400px'" onblur="notFocus('id4')" ><br>			
+			<input type="password" id="id5" onclick="document.getElementById('id5').style.width='400px'" onblur="notFocus('id5')"  name="password" minlength="3" maxlength="10"   placeholder="Password" ><br>
+			<input type="Password" id="id6" onclick="document.getElementById('id6').style.width='400px'" onblur="notFocus('id6')"  name="" minlength="3" maxlength="10" placeholder="Confirm Password" ><br>
+            <h1 style="margin-bottom: 10px;margin-top: 10px;">Payment Details</h1>
+			<input id="id7" type="text" name="accno" placeholder="Account number" onclick="document.getElementById('id7').style.width='400px'" onblur="notFocus('id1')" ><br>
+			
+			<input id="id8" type="date" name="date1" placeholder="Expiry Date" onclick="document.getElementById('id8').style.width='400px'" onblur="notFocus('id3')" ><br>
+      <input id="id9" type="number" name="cvv" placeholder="CVV number" onclick="document.getElementById('id9').style.width='400px'" onblur="notFocus('id4')" ><br>
+			<input type="Reset" value="Reset" style="margin-left: 10px;">
+			<input type="submit" onclick="validatetheform()" style="margin-left: 20px;" value="Sign-Up">	
+
+			<p style="float: right; color: white; position: bottom; ">*ALL fields are compulsory*</p>
+		</form>
+
+
+	<div class="footer">
+  				<p class="foot" style="margin-top: 15px;"><a href="">Home</a>&emsp;|&emsp;<a href="Fap.xml">FAQ</a>&emsp;|&emsp;<a href="contact.xml">Contact Us</a></p>
+
+  				<p style="float: right; color: white; ">copyright @2019LeaveManagement.All rights reserved</p>
+
+		</div>
+    </div>
+
+</body>
+</html>

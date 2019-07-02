@@ -1,0 +1,191 @@
+
+
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	/*background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
+}
+
+p {
+	text-align: center;
+}
+
+/*.headliness
+{
+	margin-top: 20px;
+}*/
+
+.TopMenu {
+  overflow: hidden;
+  background-color: #424242;
+}
+
+
+
+.TopMenu a:hover {
+  background-color: #0277bd;
+  color: white;
+}
+
+
+
+.TopMenu a {
+	margin-right: 15px;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 19px 17px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.TopMenu h2 {
+		
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.button5 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: green;
+  color: white;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button6 {
+  background-color: #03a9f4;
+  color: white;
+  border: 2px solid #555555;
+}
+
+.button6:hover {
+  background-color: white;
+  color: #03a9f4;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 5%;
+   background-color: #424242;
+   color: white;
+   text-align: center;
+}
+
+.foot a:link{
+    color: white;
+    text-decoration: none;
+}
+.foot a:visited{
+    color: white;
+    text-decoration: none;
+}
+.foot a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+
+.login{
+	height: 350px;
+	width: 450px;
+	background-color: #E5E4E2;
+	margin-left: 50%;
+	margin-top: 20%;
+
+	
+}
+input {
+    width: 250px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 75px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+
+}
+
+.box {
+	width: 600px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919;
+	text-align: center;
+
+}
+
+.box h1 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+
+.box input[type = "text"], .box input[type = "email"], .box input[type = "password"], .box input[type = "number"],.box input[type = "date"] {
+	border: 0;
+	background: none;
+	/*display: block;*/
+	margin: 10px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 300px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+
+}
+
+/*.box input[type = "text"]:focus , .box input[type = "password"]:focus {
+	width: 280px;
+	border-color: #2ecc71;
+
+}*/
+
+.box input[type = "submit"] , .box input[type = "reset"]   {
+	border: 0;
+	background: #3498db;
+	/*display: block;*/
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.box input[type = "submit"]:hover , .box input[type = "reset"]:hover {
+	background: black;
+}

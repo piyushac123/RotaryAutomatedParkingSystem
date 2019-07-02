@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="getTime.css">
+    <link rel="stylesheet" type="text/css" href="../res/res.css">
+    <link rel="stylesheet" type="text/css" href="../res/res.js">
+    
+<body>
+    <div class="loginbox">
+    <img src="../images/avatar2.png" class="avatar">
+        <h1>ENTER DETAILS</h1>
+        <center>
+        <form class="box" action="getTime.php" method="post" onsubmit="return validateForm()">
+            <p>E-Mail</p>
+            <input id="id3" type="email" name="email1" placeholder="Email-Id" onblur="notFocus('id3')" >
+	     <p>Date</p>
+            <input id="id4" type="date" name="date1" placeholder="Enter Date"> 
+	    <p>Arrival Time</p>
+            <input id="id5" type="time" name="arrivalTime1" placeholder="Enter Arrival Time">
+	     <p>Stay Time(in hrs)</p>
+            <input id="id6" type="number" name="stayTime1" placeholder="Enter Stay Time" oninput="myFunction()">
+		<div style="text-align: left;margin-left: 30px;margin-top: 10px;" id="demo"></div>
+            
+		      <br><br>
+            <input type="submit" name="abc" value="PROCEED">
+            
+            <!--<a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>-->
+        </form>
+        </center>
+    </div>
+    <!--<script>
+        function validateForm(){
+        var email = document.getElementById("id3").value;
+        var date = document.getElementById("id4").value;
+        var arrivalTime = document.getElementById("id5").value;
+        var stayTime = document.getElementById("id6").value;
+         //var x = new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}");
+         //var y= x.test(password);
+            var val="";
+        if(email=="")
+            {
+                val+="Please enter your Email\n"; 
+                email.focus();
+            }
+        if(date=="")
+            {
+                val+="Please enter date\n"; 
+                date.focus(); 
+            }
+            alert(val);
+        }
+    </script>-->
+    <script type="text/javascript">
+        function validateForm()
+        {
+            var email = document.getElementById("id3").value;
+            var date = document.getElementById("id4").value;
+            var arrivalTime = document.getElementById("id5").value;
+            var stayTime = document.getElementById("id6").value;
+          if(email=="" || date=="" || arrivalTime==""|| stayTime=="")
+          { 
+            alert("Please fill all fields");
+            window.location.replace('../getTime/getTime.html')
+            return false;
+          }
+            
+
+          //    alert("validations passed");
+          return true;
+        }
+        function myFunction(){
+            var stayTime = document.getElementById("id6").value;
+            if(stayTime<0){
+                alert("Please enter non negative stay time");
+                document.getElementById("id6").innerHTML=0;
+                document.getElementById("demo").innerHTML="";
+            }
+            else{
+                document.getElementById('demo').innerHTML="Amount : Rs."+(stayTime*10);
+            }
+            
+        }
+        </script>
+    
+</body>
+</head>
+</html>
